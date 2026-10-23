@@ -1,0 +1,202 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{ReversibilityBoundary-Spine (v1.0)\\
+\large Formal Operator-Geometry Math Spine for Reversible--Irreversible Substrate Classification}
+\author{Borealis S. Hedling}
+\date{October 2026}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+This document defines the mathematical spine for the \textbf{ReversibilityBoundary-Spine},
+a unified operator-geometry framework for classifying reversible, irreversible, and hybrid
+substrates. The framework integrates:
+
+\begin{itemize}
+    \item reversible manifold traversal (Tri-Altitude Spiral Specification),
+    \item irreversibility stress testing (ITA v1.0),
+    \item geometric invariants (StructuralAI runtime),
+    \item formal verification (Lean),
+    \item system-agnostic execution (Python + Julia).
+\end{itemize}
+
+The goal is to provide a rigorous operator-level boundary classifier for AI interpretability,
+geometric AI systems, reversible narrative ecologies, and future reversible simulation engines.
+
+\section{Reversible Substrate}
+
+Let $M$ be a smooth manifold and $U : M \to M$ a reversible operator.
+
+\begin{definition}[Reversible Operator]
+$U$ is reversible if there exists $U^{-1} : M \to M$ such that
+\[
+U^{-1}(U(x)) = x \quad \forall x \in M.
+\]
+\end{definition}
+
+Reversible substrates preserve:
+
+\begin{itemize}
+    \item manifold continuity,
+    \item geodesic adjacency,
+    \item holonomy neutrality,
+    \item drift-free evolution,
+    \item full state recoverability.
+\end{itemize}
+
+The Tri-Altitude Spiral Specification provides a reversible baseline.
+
+\section{Irreversible Substrate}
+
+Irreversible substrates violate invertibility:
+
+\begin{definition}[Irreversible Operator]
+$U$ is irreversible if
+\[
+U^{-1}(U(x)) \neq x
+\]
+for some $x \in M$.
+\end{definition}
+
+Irreversibility arises from:
+
+\begin{itemize}
+    \item non-invertible nonlinearities,
+    \item softmax collapse,
+    \item context compression,
+    \item attractor basin transitions,
+    \item non-geodesic jumps,
+    \item loss of latent manifold structure.
+\end{itemize}
+
+Transformers are canonical examples.
+
+\section{Geometric Invariants}
+
+The Boundary Mapper uses the following invariants.
+
+\subsection{Curvature}
+
+Discrete curvature accumulation:
+\[
+\kappa_t = \|x_{t+1} - x_t\|.
+\]
+
+\subsection{Holonomy}
+
+Parallel transport around a loop $\gamma = (x_1, \dots, x_n)$:
+\[
+H(\gamma) = \prod_{i=1}^n U(x_i).
+\]
+
+Holonomy deviation:
+\[
+\Delta H = \|H(\gamma) - I\|.
+\]
+
+\subsection{Lyapunov Exponent}
+
+\[
+\lambda_t = \log \|x_{t+1} - x_t\|.
+\]
+
+\subsection{Fixed-Point Violation}
+
+Solve:
+\[
+U(C) = C \quad \Rightarrow \quad (U - I)C = 0.
+\]
+
+Violation occurs if:
+\[
+\min |\lambda_i(U - I)| > 0.
+\]
+
+\subsection{Irreversibility Error}
+
+\[
+\epsilon_{\text{inv}} = \|U^{-1}(U(x)) - x\|.
+\]
+
+\section{Diagnostic Vector}
+
+Define the diagnostic vector:
+\[
+D(x) = (\kappa, \Delta H, \lambda, \epsilon_{\text{fp}}, \epsilon_{\text{inv}}).
+\]
+
+Each component measures deviation from reversible manifold behavior.
+
+\section{Boundary Classification}
+
+\begin{definition}[Boundary Classification]
+\[
+\mathrm{Boundary}(x) =
+\begin{cases}
+\text{Reversible} & \text{if } D(x) = 0, \\
+\text{Irreversible} & \text{if } D(x) > 0 \text{ for any component}, \\
+\text{Hybrid} & \text{if } D(x) \text{ oscillates}.
+\end{cases}
+\]
+\end{definition}
+
+This classification defines the reversible--irreversible boundary in operator geometry.
+
+\section{Lean Formalization Targets}
+
+The math spine supports Lean proofs of:
+
+\begin{itemize}
+    \item reversibility soundness,
+    \item invariant preservation,
+    \item holonomy neutrality,
+    \item drift-free evolution,
+    \item classification correctness.
+\end{itemize}
+
+\section{Julia Runtime Integration}
+
+The Julia runtime implements:
+
+\[
+x_{t+1} = U(x_t)
+\]
+
+and computes:
+
+\[
+(\kappa_t, \Delta H_t, \lambda_t, \epsilon_{\text{fp}}, \epsilon_{\text{inv}}).
+\]
+
+These feed into the Boundary Mapper classifier.
+
+\section{Python Toolkit Integration}
+
+The Python toolkit provides:
+
+\begin{itemize}
+    \item ITA v1.0 irreversibility stress tests,
+    \item reversible baseline harness,
+    \item transformer irreversibility diagnostics,
+    \item system-agnostic operator evaluation.
+\end{itemize}
+
+\section{Interpretability Significance}
+
+ReversibilityBoundary-Spine provides a geometric interpretability framework
+for identifying collapse surfaces, drift accumulation, and irreversible attractor
+basins in AI systems. It enables reversible narrative ecologies, reversible game
+engines, and geometric AI architectures with stable manifold behavior.
+
+\section*{Provenance}
+
+Authored within the Shared-Horizon collaboration membrane as part of the
+StructuralAI operator-geometry program. Non-activating, descriptive-only,
+NDH-safe. Version 1.0 (2026-10-23, Dublin, Ireland).
+
+\end{document}
