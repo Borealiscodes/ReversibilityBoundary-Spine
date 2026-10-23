@@ -1,0 +1,110 @@
+% ------------------------------------------------------------
+% Python Diagnostic Toolkit (Module 5)
+% Author: Borealis S. Hedling
+% Altitude: A6.5 (Boundary Layer)
+% Purpose: Provide Python-style pseudocode for runtime
+%          diagnostics corresponding to the A6 firewall
+%          invariants. These tools allow curvature, spectral
+%          mismatch, holonomy drift, collapse locality, and
+%          stability envelopes to be evaluated without requiring
+%          non-dual algebra or projection-repair operators.
+% ------------------------------------------------------------
+
+\section{Python Diagnostic Toolkit}
+
+This module provides Python-style pseudocode for evaluating the A6 firewall
+invariants at runtime. These diagnostic tools mirror the Lean verification
+lemmas and allow the Boundary Mapper to compute curvature deviation, spectral
+mismatch, holonomy drift, collapse locality, and stability envelope
+monotonicity.
+
+\subsection{Toolkit Philosophy}
+
+The diagnostic toolkit is intentionally algebra-light. It evaluates geometric
+and spectral invariants without requiring access to A7 non-dual algebra or
+projection-repair operators. This ensures that diagnostics remain readable
+and accessible.
+
+\section{Curvature Estimator}
+
+\begin{verbatim}
+def curvature_deviation(K, p, q):
+    """
+    Estimate curvature deviation between adjacent points.
+    K : function returning curvature at a point
+    p, q : adjacent points
+    """
+    return abs(K(p) - K(q))
+\end{verbatim}
+
+This function evaluates curvature continuity across the firewall boundary.
+
+\section{Spectral Mismatch Calculator}
+
+\begin{verbatim}
+def spectral_mismatch(L, p, q):
+    """
+    Compute spectral mismatch between operator spectra.
+    L : function returning operator at a point
+    p, q : adjacent points
+    """
+    spec_p = spectrum(L(p))
+    spec_q = spectrum(L(q))
+    return distance(spec_p, spec_q)
+\end{verbatim}
+
+This function detects spectral tearing or instability.
+
+\section{Holonomy Drift Calculator}
+
+\begin{verbatim}
+def holonomy_drift(H, gamma):
+    """
+    Compute holonomy drift along a loop gamma.
+    H : function returning holonomy of a loop
+    gamma : loop in the manifold
+    """
+    return H(gamma)
+\end{verbatim}
+
+This function evaluates drift accumulation and checks fracture thresholds.
+
+\section{Collapse-Surface Detector}
+
+\begin{verbatim}
+def collapse_locality(Sigma, p, eps):
+    """
+    Check whether collapse surfaces are locally detectable.
+    Sigma : set of collapse-surface points
+    p : point in the manifold
+    eps : locality radius
+    """
+    neighborhood = ball(p, eps)
+    return len(neighborhood.intersection(Sigma)) > 0
+\end{verbatim}
+
+This function ensures collapse surfaces do not smear across the boundary.
+
+\section{Stability Envelope Evaluator}
+
+\begin{verbatim}
+def stability_monotonicity(E, p, q):
+    """
+    Evaluate stability envelope monotonicity.
+    E : function returning envelope value
+    p, q : points with E(p) <= E(q)
+    """
+    if E(p) <= E(q):
+        return True
+    return False
+\end{verbatim}
+
+This function checks whether stability envelopes remain monotone.
+
+\section{Toolkit Summary}
+
+The Python diagnostic toolkit provides runtime evaluation of the A6 firewall
+invariants. These tools allow the Boundary Mapper to compute curvature
+deviation, spectral mismatch, holonomy drift, collapse locality, and
+stability envelope monotonicity without requiring non-dual algebra. The
+toolkit ensures that diagnostics remain accessible, modular, and safe.
