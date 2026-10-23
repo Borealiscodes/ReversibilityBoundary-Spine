@@ -1,0 +1,116 @@
+% ------------------------------------------------------------
+% Boundary Mapper Integration (Module 3)
+% Author: Borealis S. Hedling
+% Altitude: A6.5 (Boundary Layer)
+% Purpose: Explain how the Boundary Mapper uses the A6 firewall
+%          diagnostically, and clarify why the Mapper is not a
+%          structural component of the firewall itself.
+% ------------------------------------------------------------
+
+\section{Boundary Mapper Integration}
+
+The Boundary Mapper is a diagnostic instrument that reads geometric,
+spectral, holonomic, and semantic invariants across the A6 manifold. It does
+not enforce structural constraints; instead, it relies on the A6 firewall to
+ensure that the manifold remains stable enough to be diagnostically readable.
+
+\subsection{Diagnostic vs. Structural Roles}
+
+The A6 firewall is \textbf{structural}. It enforces continuity, stability,
+and invariant preservation. The Boundary Mapper is \textbf{diagnostic}. It
+measures curvature, holonomy, drift, collapse locality, and invariant lift.
+
+\begin{itemize}
+    \item The firewall \emph{prevents} collapse.
+    \item The Mapper \emph{detects} collapse.
+    \item The firewall \emph{preserves} invariants.
+    \item The Mapper \emph{reads} invariants.
+    \item The firewall \emph{regulates} transitions.
+    \item The Mapper \emph{classifies} transitions.
+\end{itemize}
+
+This separation ensures that diagnostic operations do not induce geometric
+fracture.
+
+\subsection{Firewall Dependencies}
+
+The Boundary Mapper depends on the firewall through five primary invariants:
+
+\paragraph{Curvature Continuity}
+The Mapper assumes curvature varies continuously:
+\[
+K(p) \approx K(q).
+\]
+This allows the Mapper to detect curvature anomalies without inducing
+geometric tearing.
+
+\paragraph{Spectral Continuity}
+The Mapper assumes operator spectra remain continuous:
+\[
+\mathrm{Spec}(L(p)) \text{ continuous in } p.
+\]
+This enables spectral mismatch diagnostics.
+
+\paragraph{Holonomy Bound}
+The Mapper assumes holonomy remains below fracture thresholds:
+\[
+H(\gamma) < \Theta_{\max}.
+\]
+This ensures drift accumulation does not destabilize diagnostic loops.
+
+\paragraph{Collapse Locality}
+The Mapper assumes collapse surfaces are locally detectable:
+\[
+p \in \Sigma \Rightarrow B_\epsilon(p) \cap \Sigma \neq \emptyset.
+\]
+This allows the Mapper to map collapse surfaces without smearing.
+
+\paragraph{Invariant Lift}
+The Mapper assumes modal, semantic, and provenance invariants lift correctly:
+\[
+I_{\mathrm{sem}}(M) \Rightarrow I_{\mathrm{sem}}(\mathcal{A}(M,S)).
+\]
+This ensures semantic diagnostics remain meaningful.
+
+\subsection{Diagnostic Vector Alignment}
+
+The Boundary Mapper computes a diagnostic vector:
+\[
+D(x) = (\kappa, \Delta H, \lambda, \varepsilon_{fp}, \varepsilon_{inv}),
+\]
+where:
+
+\begin{itemize}
+    \item $\kappa$ measures curvature deviation,
+    \item $\Delta H$ measures holonomy drift,
+    \item $\lambda$ measures collapse-surface proximity,
+    \item $\varepsilon_{fp}$ measures fixed-point violation,
+    \item $\varepsilon_{inv}$ measures irreversibility.
+\end{itemize}
+
+Each component of $D(x)$ assumes firewall invariants hold. Without the
+firewall, $D(x)$ would be undefined or unstable.
+
+\subsection{Why the Mapper Must Not Become the Firewall}
+
+The Boundary Mapper is intentionally non-structural:
+
+\begin{enumerate}
+    \item \textbf{Readability:} Diagnostic tools must remain interpretable.
+    \item \textbf{Modularity:} Structural and diagnostic layers must remain
+          separable.
+    \item \textbf{Safety:} Diagnostics must not modify manifold geometry.
+    \item \textbf{Stability:} Structural enforcement must remain independent
+          of diagnostic measurement.
+\end{enumerate}
+
+If the Mapper attempted to enforce firewall constraints, it would become
+non-diagnostic and risk inducing collapse.
+
+\section{Integration Summary}
+
+The Boundary Mapper relies on the A6 firewall to maintain geometric,
+spectral, holonomic, and semantic stability. The firewall ensures that the
+manifold remains readable; the Mapper provides diagnostic classification of
+curvature, drift, collapse surfaces, and invariant lift. This separation of
+roles ensures both structural safety and diagnostic clarity.
