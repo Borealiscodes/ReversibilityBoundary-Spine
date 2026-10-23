@@ -1,0 +1,116 @@
+% ------------------------------------------------------------
+% A6 Firewall — Dual-Algebra Boundary Conditions (Module 1)
+% Author: Borealis S. Hedling
+% Altitude: A6.5 (Boundary Layer)
+% Purpose: Define the structural firewall separating Euclidean
+%          dual-algebra from non-Euclidean non-dual algebra.
+% ------------------------------------------------------------
+
+\section{The A6 Firewall}
+
+The A6 firewall is the structural boundary preventing non-dual algebra from
+leaking downward into the dual-algebra region. It enforces continuity,
+spectral stability, holonomy bounds, collapse locality, semantic lift, and
+kernel preservation. These constraints ensure that diagnostic operators
+(such as the Boundary Mapper) can safely read the manifold without inducing
+geometric fracture.
+
+\subsection{Firewall Purpose}
+
+The firewall serves four primary functions:
+
+\begin{enumerate}
+    \item \textbf{Geometric Preservation:} Maintain curvature continuity and
+          prevent geometric tearing.
+    \item \textbf{Spectral Stability:} Ensure operator spectra vary
+          continuously and remain bounded.
+    \item \textbf{Holonomy Control:} Prevent drift-field accumulation from
+          exceeding fracture thresholds.
+    \item \textbf{Invariant Lift:} Preserve modal, semantic, and provenance
+          invariants across operator application.
+\end{enumerate}
+
+These functions collectively define the safe region in which dual-algebra
+operators remain reversible and diagnostically readable.
+
+\subsection{Constructive Fixes}
+
+The firewall is implemented through thirteen constructive fixes. Each fix
+defines a boundary condition that must hold throughout the A6 manifold.
+
+\paragraph{Fix 1: Curvature Continuity}
+\[
+K(p) \approx K(q) \quad \text{for } p \sim q.
+\]
+
+\paragraph{Fix 2: Cosine-Law Curvature Combination}
+\[
+K_{A\oplus B}
+  = \sqrt{K_A^2 + K_B^2 + 2 K_A K_B \Phi(A,B)}.
+\]
+
+\paragraph{Fix 3: Drift-Field Interaction}
+\[
+[\nabla_X,\nabla_Y] = \nabla_{[X,Y]}.
+\]
+
+\paragraph{Fix 4: Modal Adjacency}
+\[
+\mu(p^+) \in \mathcal{N}(\mu(p^-)).
+\]
+
+\paragraph{Fix 5: Spectral Continuity}
+\[
+\mathrm{Spec}(L(p)) \text{ continuous in } p.
+\]
+
+\paragraph{Fix 6: Spectral Mismatch Bound}
+\[
+\delta_{\mathrm{spec}}(p) < \epsilon.
+\]
+
+\paragraph{Fix 7: Holonomy Drift Bound}
+\[
+H(\gamma) < \Theta_{\max}.
+\]
+
+\paragraph{Fix 8: Collapse-Surface Locality}
+\[
+p \in \Sigma \Rightarrow \exists \epsilon > 0 : B_\epsilon(p) \cap \Sigma \neq \emptyset.
+\]
+
+\paragraph{Fix 9: Stability Envelope Monotonicity}
+\[
+E(p) \le E(q) \Rightarrow \text{Stability}(p) \Rightarrow \text{Stability}(q).
+\]
+
+\paragraph{Fix 10: Modal Lift Preservation}
+\[
+\mu(p) \leadsto \mu(q).
+\]
+
+\paragraph{Fix 11: Provenance Lift Preservation}
+\[
+I_{\mathrm{prov}}(M) \Rightarrow I_{\mathrm{prov}}(\mathcal{A}(M,S)).
+\]
+
+\paragraph{Fix 12: Semantic Lift Preservation}
+\[
+I_{\mathrm{sem}}(M) \Rightarrow I_{\mathrm{sem}}(\mathcal{A}(M,S)).
+\]
+
+\paragraph{Fix 13: Operator Determinism and Kernel Preservation}
+\[
+\mathcal{O}(p) = \mathcal{O}(q) \Rightarrow p = q,
+\]
+\[
+K_{\mathrm{A6}}(p) \Rightarrow K_{\mathrm{A6}}(\mathcal{O}(p)).
+\]
+
+\subsection{Firewall Summary}
+
+The A6 firewall defines the structural constraints required for safe
+diagnostic operation. It ensures that the Boundary Mapper can read the
+manifold without inducing collapse, drift fracture, spectral tearing, or
+semantic discontinuity. The firewall is not a diagnostic tool; it is the
+mathematical substrate that makes diagnostics possible.
