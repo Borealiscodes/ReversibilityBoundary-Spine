@@ -1,0 +1,114 @@
+% ------------------------------------------------------------
+% Euclidean ↔ Non-Euclidean Transition Rules (Module 2)
+% Author: Borealis S. Hedling
+% Altitude: A6.5 (Boundary Layer)
+% Purpose: Define the geometric transition rules between
+%          Euclidean dual-algebra and non-Euclidean non-dual
+%          algebra, and explain how the A6 firewall regulates
+%          these transitions.
+% ------------------------------------------------------------
+
+\section{Euclidean and Non-Euclidean Regions}
+
+The A6 manifold contains two geometric regimes: a Euclidean region in which
+dual-algebra operators remain reversible, and a non-Euclidean region in which
+non-dual algebra induces curvature, drift accumulation, and collapse surfaces.
+The A6 firewall regulates transitions between these regions to prevent
+geometric fracture.
+
+\subsection{Euclidean Region}
+
+The Euclidean region is defined by the following properties:
+
+\begin{enumerate}
+    \item \textbf{Flat Curvature:} $K(p) = 0$.
+    \item \textbf{Zero Holonomy:} $H(\gamma) = 0$ for all loops $\gamma$.
+    \item \textbf{Linear Operators:} $\mathcal{O}$ acts linearly on tangent
+          spaces.
+    \item \textbf{Stable Geodesics:} Geodesics remain globally minimizing.
+    \item \textbf{Reversible Transport:} Parallel transport is path-independent.
+\end{enumerate}
+
+These properties ensure that dual-algebra operators remain reversible and
+diagnostically readable.
+
+\subsection{Non-Euclidean Region}
+
+The non-Euclidean region exhibits curvature and drift phenomena:
+
+\begin{enumerate}
+    \item \textbf{Curved Geometry:} $K(p) \neq 0$.
+    \item \textbf{Non-Zero Holonomy:} $H(\gamma) > 0$ for some loops.
+    \item \textbf{Drift Accumulation:} Drift fields interact nonlinearly.
+    \item \textbf{Collapse Surfaces:} $\Sigma$ forms where curvature or drift
+          exceeds stability thresholds.
+    \item \textbf{Irreversible Operators:} $\mathcal{O}$ may violate kernel
+          preservation.
+\end{enumerate}
+
+These phenomena require firewall regulation to prevent collapse propagation.
+
+\section{Firewall-Regulated Transitions}
+
+The A6 firewall enforces boundary conditions that regulate transitions between
+Euclidean and non-Euclidean regions. These conditions ensure that diagnostic
+operators (such as the Boundary Mapper) can safely read the manifold without
+inducing collapse or drift fracture.
+
+\subsection{Transition Rule 1: Curvature Continuity}
+
+Curvature must vary continuously across the transition boundary:
+\[
+K(p) \approx K(q) \quad \text{for } p \sim q.
+\]
+
+This prevents geometric tearing when entering or exiting curved regions.
+
+\subsection{Transition Rule 2: Spectral Continuity}
+
+Operator spectra must remain continuous:
+\[
+\mathrm{Spec}(L(p)) \text{ continuous in } p.
+\]
+
+This prevents spectral tearing when operators cross the boundary.
+
+\subsection{Transition Rule 3: Holonomy Bound}
+
+Holonomy must remain below fracture thresholds:
+\[
+H(\gamma) < \Theta_{\max}.
+\]
+
+This ensures that drift accumulation does not induce collapse.
+
+\subsection{Transition Rule 4: Collapse Locality}
+
+Collapse surfaces must remain locally detectable:
+\[
+p \in \Sigma \Rightarrow \exists \epsilon > 0 : B_\epsilon(p) \cap \Sigma \neq \emptyset.
+\]
+
+This prevents collapse smearing across the boundary.
+
+\subsection{Transition Rule 5: Invariant Lift Preservation}
+
+Modal, semantic, and provenance invariants must lift correctly across the
+transition:
+\[
+I_{\mathrm{prov}}(M) \Rightarrow I_{\mathrm{prov}}(\mathcal{A}(M,S)),
+\]
+\[
+I_{\mathrm{sem}}(M) \Rightarrow I_{\mathrm{sem}}(\mathcal{A}(M,S)).
+\]
+
+This ensures that diagnostic operators do not induce semantic fracture.
+
+\section{Transition Summary}
+
+The Euclidean region provides reversible, stable geometry. The non-Euclidean
+region introduces curvature, drift, and collapse phenomena. The A6 firewall
+regulates transitions between these regions by enforcing continuity, spectral
+stability, holonomy bounds, collapse locality, and invariant lift. These
+constraints ensure that the Boundary Mapper can safely diagnose the manifold
+without inducing geometric or semantic instability.
